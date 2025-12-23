@@ -1,69 +1,71 @@
-# najmishahmi33-create.github.io
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My E-Portfolio</title>
+    <title>EquiConnect</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>Muhammad Najmi Shahmi Bin Mohd Latpi </h1>
-        <p>Student | First Year Data Engineering | UTM Johor Bharu</p>
-    </header>
+<header>
+    <h1>🐎 EquiConnect</h1>
+    <p>Smart Equestrian Management & Engagement System</p>
+</header>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<nav>
+    <button onclick="showSection('dashboard')">Dashboard</button>
+    <button onclick="showSection('horses')">Horses</button>
+    <button onclick="showSection('logs')">Logs</button>
+    <button onclick="showSection('appointments')">Appointments</button>
+    <button onclick="showSection('community')">Community</button>
+</nav>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am a student learning programming and technology.
-            This e-portfolio showcases my skills, projects, and achievements.
-        </p>
+<main>
+    <!-- Dashboard -->
+    <section id="dashboard" class="section">
+        <h2>Dashboard</h2>
+        <p>Total Horses: <span id="horseCount">0</span></p>
+        <p>Upcoming Appointments: <span id="appointmentCount">0</span></p>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>C++</li>
-            <li>Capcut</li>
-            <li>Canva</li>
-            <li>Problem Solving</li>
-        </ul>
+    <!-- Horses -->
+    <section id="horses" class="section hidden">
+        <h2>Horse Management</h2>
+        <input type="text" id="horseName" placeholder="Horse Name">
+        <input type="text" id="horseBreed" placeholder="Breed">
+        <button onclick="addHorse()">Add Horse</button>
+        <ul id="horseList"></ul>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>COVID Status Program</h3>
-            <p>C++ program to determine COVID zones.</p>
-        </div>
-        <div class="project">
-            <h3>Logic Gate Circuit</h3>
-            <p>Implemented NAND-only logic circuit.</p>
-        </div>
+    <!-- Logs -->
+    <section id="logs" class="section hidden">
+        <h2>Training & Health Logs</h2>
+        <input type="text" id="logText" placeholder="Training / Health note">
+        <button onclick="addLog()">Add Log</button>
+        <ul id="logList"></ul>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: najmishahmi33@gmail.com</p>
-        <p>GitHub: <a href="https://github.com/najmishahmi33- create" target="_blank">Najmi</a></p>
+    <!-- Appointments -->
+    <section id="appointments" class="section hidden">
+        <h2>Appointments</h2>
+        <input type="date" id="apptDate">
+        <input type="text" id="apptDesc" placeholder="Vet / Training / Farrier">
+        <button onclick="addAppointment()">Add Appointment</button>
+        <ul id="appointmentList"></ul>
     </section>
 
-    <!-- Footer -->
-    <footer>
+    <!-- Community -->
+    <section id="community" class="section hidden">
+        <h2>Community Feed</h2>
+        <input type="text" id="postText" placeholder="Share something...">
+        <button onclick="addPost()">Post</button>
+        <ul id="postList"></ul>
+    </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
         <p>© 2025 Your Name</p>
     </footer>
 
